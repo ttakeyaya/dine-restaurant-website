@@ -1,0 +1,23 @@
+/**
+Define a button
+*/
+
+// basic style
+.btn {
+  cursor: pointer;
+  width: 24.5rem;
+  height: 6.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+// style for the white button
+.btn-white {
+  border: 1px solid white;
+  color: var(--color-white);
+}

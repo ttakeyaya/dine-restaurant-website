@@ -1,0 +1,44 @@
+/**
+-Import spartan and defined the font variable
+-Define color varibalbes
+-Reset CSS properties(margin, padding)
+
+note: set 1rem to be 10px;
+*/
+
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap");
+
+$spartan: "Spartan", sans-serif;
+
+// Colors
+:root {
+  --color-white: white;
+  --color-primary-beaver: rgb(158, 127, 102);
+  --color-primary-cod-gray: rgb(17, 17, 17);
+
+  --color-secondary-mirage: rgb(23, 25, 43);
+  --color-secondary-ebony-clay: rgb(36, 43, 55);
+  --color-secondary-shuttle-gray: rgb(92, 103, 121);
+}
+
+// Simple resetting
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: $spartan;
+  overflow-x: hidden;
+}

@@ -5,43 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/main.css">
   <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
 <body>
-  <header>
-    <!--  -->
-    Logo here
-    <!--  -->
-    <h1>
-      Exquisite dining since 1989
-    </h1>
-    <p>
-      Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from 
-      the comfort of our farmhouse.
-    </p>
-    
-    <a href="./booking.html">Book a table</a>
-    
+  <header class="header">
+    <div class="header__hero"></div>
+    <div class="header__content">
+      <img src="images/logo.svg" alt="dine logo">
+      <!--  -->
+      <h1 class="header__title text-white text-title">
+        Exquisite dining<br/> since 1989
+      </h1>
+      <p class="header__body text-white text-body">
+        Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from 
+        the comfort of our farmhouse.
+      </p>
+
+      <button type="button" onclick="location.href='./booking.html'" class="btn btn-white">Book a table</button>
+    </div>
   </header>
   <main>
-    <section>
-      <h3>
-        Enjoyable place for all the family
-      </h3>
-      <p>
-        Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
-        a tour of the farm before your meal.
-      </p>
-    </section>
-    <section>
-      <h3>
-        The most locally sourced food
-      </h3>
-      <p>
-        All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
-        eating the freshest, most sustainable food.
-      </p>
+    <section class="about">
+      <article class="about__content">
+        <picture class="about__img-container">
+          <source srcset="./images/homepage/enjoyable-place-mobile@2x.jpg" media="(min-width:500px)">
+          <img src="images/homepage/enjoyable-place-mobile.jpg">
+        </picture>
+        <h3 class="about__title text-subtitle">
+          Enjoyable place<br/> for all the family
+        </h3>
+        <p class="about__body text-subbody">
+          Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
+          a tour of the farm before your meal.
+        </p>
+      </article>
+      <article class="about__content">
+        <picture class="about__img-container">
+          <source srcset="images/homepage/locally-sourced-mobile@2x.jpg" media="(min-width:500px)">
+          <img src="images/homepage/locally-sourced-mobile.jpg">
+        </picture>
+        
+        <h3 class="about__title text-subtitle">
+          The most locally<br/> sourced food
+        </h3>
+        <p class="about__body text-subbody">
+          All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
+          eating the freshest, most sustainable food.
+        </p>
+      </article>
     </section>
     <section>
       <h3>
@@ -113,12 +125,12 @@
     
       <a href="./booking.html">Book a table</a>
     </section>
-    <section>
+    <aside>
       <h4>
         Ready to make a reservation?
       </h4>
       <a href="./booking.html">Book a table</a>
-    </section>
+    </aside>
   </main>
   <footer>
     <address>

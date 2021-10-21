@@ -1,0 +1,32 @@
+.header {
+  background-color: var(--color-primary-cod-gray);
+  height: 74.8rem;
+
+  &__hero {
+    background: url("../images/homepage/hero-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100vw;
+    height: 35vh;
+    @media screen and (min-width: 460px) {
+      background: url("../images/homepage/hero-bg-mobile@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+  }
+  &__content {
+    text-align: center;
+    margin: 0 auto;
+    width: 75vw;
+    .header__title {
+      padding-top: 3.2rem;
+      padding-bottom: 2.4rem;
+    }
+    .header__body {
+      padding-bottom: 3.2rem;
+      margin: 0 auto;
+    }
+  }
+}

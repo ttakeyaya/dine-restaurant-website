@@ -1,0 +1,98 @@
+/**
+  h1, spartan light, 64px 72px line, -0.8chara
+  h2, spartan bold, 40px 56px line, -0.5chara
+  H3(L) spartan Bold, 18px, 28px line, -0.22 chara
+  H3(s) spartan semibold, 14px 28px line, +2chara
+  Body1, spartan regular, 18px, 30px line, -0.22chara
+  body2, spartan regular, 15px , 28px line, -0.19chara
+*/
+.text-white {
+  color: white;
+}
+.text-title {
+  font-weight: 300;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: -0.4px;
+  // for tablet
+  @media screen and (min-width: 600px) {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.6px;
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: 6.4rem;
+    line-height: 7.2rem;
+    letter-spacing: -0.8px;
+  }
+}
+
+.text-body {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.19px;
+  // for tablet and desk top
+  @media screen and (min-width: 600px) {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: -0.22px;
+  }
+}
+
+.text-subtitle {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: -0.4px;
+  @media screen and(min-width:600px) {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.5px;
+  }
+  @media screen and(min-width:1000px) {
+    font-size: 4rem;
+    line-height: 5.6rem;
+    letter-spacing: -0.5px;
+  }
+}
+.text-subbody {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.19px;
+  // tablet and desktop
+  @media screen and(min-width:600px) {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: -0.22px;
+  }
+}
+// mobile, tablet and desktop
+.text-menu-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: -0.22px;
+  @media screen and(min-width:600px) {
+  }
+}
+// mobile,tablet and desktop
+.text-menu-description {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.22px;
+}
+
+// used for the slide show navigation menus
+.text-s {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  letter-spacing: 2px;
+}
+.text-s-regular {
+  font-weight: 400;
+}
+.text-s-bold {
+  font-weight: 700;
+}
