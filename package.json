@@ -1,0 +1,14 @@
+{
+  "name": "dine-restaurant-website",
+  "version": "1.0.0",
+  "description": "![Design preview for the Dine Website Challenge coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/sass/main.scss src/css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.39.2"
+  }
+}
