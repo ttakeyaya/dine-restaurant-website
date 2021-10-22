@@ -134,6 +134,7 @@ body {
   font-size: 1.4rem;
   line-height: 2.8rem;
   letter-spacing: 2px;
+  font-style: normal;
 }
 
 .text-s-regular {
@@ -142,6 +143,10 @@ body {
 
 .text-s-bold {
   font-weight: 700;
+}
+
+.text-upper {
+  text-transform: uppercase;
 }
 
 /**
@@ -157,12 +162,17 @@ Define a button
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: transparent;
-  border-radius: 1rem;
 }
 
 .btn-white {
   border: 1px solid white;
   color: var(--color-white);
+}
+
+.btn-black {
+  background-color: var(--color-primary-cod-gray);
+  color: var(--color-white);
+  border: none;
 }
 
 .header {
@@ -232,6 +242,120 @@ Define a button
 }
 .about__body {
   padding-bottom: 8rem;
+}
+
+.menu {
+  background-color: var(--color-primary-cod-gray);
+  text-align: center;
+}
+.menu .menu-container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 7.2rem;
+}
+.menu__img-container > img {
+  width: 100%;
+}
+.menu__title {
+  padding-top: 11.1rem;
+  padding-bottom: 1.6rem;
+  position: relative;
+}
+.menu__title::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/patterns/pattern-divide.svg");
+  top: 25%;
+  left: 35%;
+  width: 7.1rem;
+  height: 0.7rem;
+}
+.menu__description {
+  padding-bottom: 6.4rem;
+}
+.menu__item {
+  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+  margin-bottom: 2.5rem;
+}
+.menu__item:last-child {
+  border: none;
+}
+.menu__item-title {
+  padding-top: 3.2rem;
+  padding-bottom: 0.4rem;
+}
+.menu__item-description {
+  padding: 0 0.6rem 2.4rem 0.6rem;
+}
+
+.feature {
+  text-align: center;
+}
+.feature .feature-conainer {
+  width: 80vw;
+  margin: 0 auto;
+}
+.feature__list {
+  list-style-type: none;
+}
+.feature__item__title {
+  padding-top: 2.4rem;
+}
+.feature__item__description {
+  padding-top: 1.6rem;
+  padding-bottom: 3.2rem;
+}
+.feature__btn {
+  margin-bottom: 12.4rem;
+}
+
+/*
+DEV
+*/
+.item2 {
+  display: none;
+}
+
+.item3 {
+  display: none;
+}
+
+.reservation {
+  background-image: url("../images/homepage/ready-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reservation__title {
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+
+.footer {
+  background-color: var(--color-primary-cod-gray);
+}
+.footer .footer-container {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 8rem;
+}
+.footer__img-container {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+.footer__address {
+  padding-bottom: 3.2rem;
+}
+.footer__table {
+  margin: 0 auto;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */

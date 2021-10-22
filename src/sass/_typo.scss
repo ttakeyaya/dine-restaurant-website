@@ -89,10 +89,14 @@
   font-size: 1.4rem;
   line-height: 2.8rem;
   letter-spacing: 2px;
+  font-style: normal;
 }
 .text-s-regular {
   font-weight: 400;
 }
 .text-s-bold {
   font-weight: 700;
+}
+.text-upper {
+  text-transform: uppercase;
 }

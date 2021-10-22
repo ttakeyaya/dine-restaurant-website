@@ -13,11 +13,16 @@ Define a button
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: transparent;
-  border-radius: 1rem;
 }
 
 // style for the white button
 .btn-white {
   border: 1px solid white;
   color: var(--color-white);
+}
+// style for the black button
+.btn-black {
+  background-color: var(--color-primary-cod-gray);
+  color: var(--color-white);
+  border: none;
 }

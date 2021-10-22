@@ -1,0 +1,16 @@
+.reservation {
+  background-image: url("../images/homepage/ready-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    text-align: center;
+    padding-bottom: 2.4rem;
+  }
+}

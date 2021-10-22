@@ -9,11 +9,14 @@
   <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
 <body>
+  <!-- header starts -->
   <header class="header">
+    <!-- hero image -->
     <div class="header__hero"></div>
+
+    <!-- header main content -->
     <div class="header__content">
       <img src="images/logo.svg" alt="dine logo">
-      <!--  -->
       <h1 class="header__title text-white text-title">
         Exquisite dining<br/> since 1989
       </h1>
@@ -21,11 +24,12 @@
         Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from 
         the comfort of our farmhouse.
       </p>
-
       <button type="button" onclick="location.href='./booking.html'" class="btn btn-white">Book a table</button>
     </div>
   </header>
+  <!-- header ends -->
   <main>
+    <!-- about section starts -->
     <section class="about">
       <article class="about__content">
         <picture class="about__img-container">
@@ -55,109 +59,136 @@
         </p>
       </article>
     </section>
-    <section>
-      <h3>
-        A few highlights from our menu
-      </h3>
-      <p>
-        We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. 
-        Our menu is revamped every season.
-      </p>
-      <article>
-        <h4>
-          Seared Salmon Fillet
-        </h4>
-        <p>
-          Our locally sourced salmon served with a refreshing buckwheat summer salad.
-        </p>
-      </article>
-      <article>
-        <h4>
-          Rosemary Filet Mignon
-        </h4>
-        <p>
-          Our prime beef served to your taste with a delicious choice of seasonal sides.
-        </p>
-      </article>
-      <article>
-        <h4>
-          Summer Fruit Chocolate Mousse
-        </h4>
-        <p>
-          Creamy mousse combined with summer fruits and dark chocolate shavings.
-        </p>
-      </article>
-    
-    </section>
-    <section>
-      <ul>
-        <li>Family Gathering</li>
-        <li>Special Events</li>
-        <li>Social Events</li>
-      </ul>
-      <article>
-        <h4>
-          Family Gathering
-        </h4>
-        <p>
-          We love catering for entire families. So please bring everyone along for a special meal with your 
-          loved ones. We’ll provide a memorable experience for all.
-        </p>
-      </article>
-      <article>
-        <h4>
-          Special Events
-        </h4>
-        <p>
-          Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. 
-          We’ll be sure to mark your special date with an unforgettable meal.
-        </p>
-      </article>
-      <article>
-        <h4>
-          Social Events
-        </h4>
-        <p>
-          Are you looking to have a larger social event? No problem! We’re more than happy to cater for big 
-          parties. We’ll work with you to make your event a hit with everyone.
-        </p>
-      </article>
-    
-      <a href="./booking.html">Book a table</a>
-    </section>
-    <aside>
-      <h4>
-        Ready to make a reservation?
-      </h4>
-      <a href="./booking.html">Book a table</a>
-    </aside>
-  </main>
-  <footer>
-    <address>
-      Marthwaite, Sedbergh<br/>
-      Cumbria<br/>
-      +00 44 123 4567<br/>
-    </address>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Open Times
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Mon - Fri:</td>
-          <td>09:00 AM - 10:00 PM</td>
-        </tr>
-        <tr>
-          <td>Sat - Sun:</td>
-          <td>09:00 AM - 11:30 PM</td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- about ends -->
 
+    <!-- menu starts -->
+    <section class="menu">
+      <div class="menu-container">
+        <h3 class="menu__title text-subtitle text-white">
+          A few highlights<br/> from our menu
+        </h3>
+        <p class="menu__description text-subbody text-white">
+          We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. 
+          Our menu is revamped every season.
+        </p>
+        <article class="menu__item">
+          <picture class="menu__img-container">
+            <source srcset="./images/homepage/salmon-mobile@2x.jpg" media="(min-width:500px)">
+            <img src="images/homepage/salmon-mobile.jpg">
+          </picture>
+          <h4 class="menu__item-title text-menu-title text-white">
+            Seared Salmon Fillet
+          </h4>
+          <p class="menu__item-description text-menu-description text-white">
+            Our locally sourced salmon served with a refreshing buckwheat summer salad.
+          </p>
+        </article>
+        <article class="menu__item">
+          <picture class="menu__img-container">
+            <source srcset=".images/homepage/beef-mobile@2x.jpg" media="(min-width:500px)">
+            <img src="images/homepage/beef-mobile.jpg">
+          </picture>
+          <h4 class="menu__item-title text-menu-title text-white">
+            Rosemary Filet Mignon
+          </h4>
+          <p class="menu__item-description text-menu-description text-white">
+            Our prime beef served to your taste with a delicious choice of seasonal sides.
+          </p>
+        </article>
+        <article class="menu__item">
+          <picture class="menu__img-container">
+            <source srcset="images/homepage/chocolate-mobile@2x.jpg" media="(min-width:500px)">
+            <img src="images/homepage/chocolate-mobile.jpg">
+          </picture>
+          <h4 class="menu__item-title text-menu-title text-white">
+            Summer Fruit Chocolate Mousse
+          </h4>
+          <p class="menu__item-description  text-menu-description text-white">
+            Creamy mousse combined with summer fruits and dark chocolate shavings.
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- menu ends -->
+
+    <section class="feature">
+      <div class="feature-conainer">
+        <ul class="feature__list">
+          <li class="feature__list__item text-s">Family Gathering</li>
+          <li class="feature__list__item text-s">Special Events</li>
+          <li class="feature__list__item text-s">Social Events</li>
+        </ul>
+        <article class="feature__item item1">
+          <h4 class="feature__item__title text-subtitle">
+            Family Gathering
+          </h4>
+          <p class="feature__item__description text-subbody">
+            We love catering for entire families. So please bring everyone along for a special meal with your 
+            loved ones. We’ll provide a memorable experience for all.
+          </p>
+        </article>
+        <article class="feature__item item2">
+          <h4 class="feature__item__title text-subtitle">
+            Special Events
+          </h4>
+          <p class="feature__item__description text-subbody">
+            Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. 
+            We’ll be sure to mark your special date with an unforgettable meal.
+          </p>
+        </article>
+        <article class="feature__item item3">
+          <h4 class="feature__item__title text-subtitle">
+            Social Events
+          </h4>
+          <p class="feature__item__description text-subbody">
+            Are you looking to have a larger social event? No problem! We’re more than happy to cater for big 
+            parties. We’ll work with you to make your event a hit with everyone.
+          </p>
+        </article>
+      
+        <button type="button" onclick="location.href='./booking.html'" class="btn btn-black feature__btn">Book a table</button>
+      </div>
+      
+    </section>
+  </main>
+  <aside class="reservation">
+    <h4 class="reservation__title text-subtitle text-white">
+      Ready to make a<br/> reservation?
+    </h4>
+    <button type="button" onclick="location.href='./booking.html'" class="btn btn-white">Book a table</button>
+  </aside>
+  <footer class="footer">
+    <div class="footer-container">
+      <figure class="footer__img-container">
+        <img src="images/logo.svg" alt="dine log"/>
+      </figure>
+      <address class="footer__address text-s text-white text-upper">
+        Marthwaite, Sedbergh<br/>
+        Cumbria<br/>
+        +00 44 123 4567<br/>
+      </address>
+      <table class="footer__table text-s text-white .text-upper">
+        <thead>
+          <tr>
+            <th colspan="2" class="table-head text-s text-s-regular ">
+              Open Times
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mon - Fri:</td>
+            <td>09:00 AM - 10:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sat - Sun:</td>
+            <td>09:00 AM - 11:30 PM</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+    
   </footer>
 </body>
 </html>
