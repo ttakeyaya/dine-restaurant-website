@@ -5,65 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/main.css">
   <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
 <body>
-  <header>
-    <h1>
+  <header class="booking">
+    <img src="images/logo.svg" alt="dine logo" class="booking__logo"/>
+    <h1 class="booking__title text-subtitle text-white">
       Reservations
     </h1>
-    <p>
+    <p class="booking__body text-subbody text-white">
       We can’t wait to host you. If you have any special requirements please feel free to 
       call on the phone number below. We’ll be happy to accommodate you.
     </p>
+    <p class="booking__reserve-place">RESERVE PLACE</p>
   </header>
-  <main>
-    <form action="#" method="post">
-      <label for="name">
-        Name
-        <input type="text" name="name">
-      </label>
-      <label for="email">
-        Email
-        <input type="email" name="email">
-      </label>
-      <label for="date">
-        Pick a date
-      </label>
-      <label for="time">
-        Pick a time
-      </label>
-      <button type="submit">
-        Make Reservation
-      </button>
-    </form>
+  <main class="booking-main">
+    <div class="form-container">
+      <form action="#" method="post" class="booking__form">
+        <label for="name" class="booking__form__item">
+          <!-- Name -->
+          <input type="text" name="name" placeholder="Name">
+        </label>
+        <label for="email" class="booking__form__item">
+          <!-- Email -->
+          <input type="email" name="email" placeholder="Email">
+        </label>
+        <label for="date" class="booking__form__item">
+          <span class="date__text">
+            Pick a date
+          </span>
+          <div class="picker">
+            <input type="text" name="date-month" min="1" max="12" placeholder="MM" class="picker-item">
+            <input type="text" name="date-day" min="1" max="31" placeholder="DD" class="picker-item">
+            <input type="text" name="date-year" min="2021" max="2024" placeholder="YYYY" class="picker-item">
+          </div>
+        </label>
+        <label for="time" class="booking__form__item">
+          <span class="date__text">
+            Pick a time
+          </span>
+          <div class="picker">
+            <input type="text" name="date-month"  placeholder="09" class="picker-item">
+            <input type="text" name="date-day"  placeholder="00" class="picker-item">
+            <select class="picker-select">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+        </label>
+        <label class="booking__form__item form__num-reservations">
+          <button class="booking__form__btn">−</button>
+          <p>4 people</p>
+          <button class="booking__form__btn">+</button>
+        </label>
+        <button type="submit" class="btn btn-black">
+          Make Reservation
+        </button>
+      </form>
+    </div>
+    
   </main>
-  <footer>
-    <address>
-      Marthwaite, Sedbergh<br/>
-      Cumbria<br/>
-      +00 44 123 4567<br/>
-    </address>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Open Times
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Mon - Fri:</td>
-          <td>09:00 AM - 10:00 PM</td>
-        </tr>
-        <tr>
-          <td>Sat - Sun:</td>
-          <td>09:00 AM - 11:30 PM</td>
-        </tr>
-      </tbody>
-    </table>
+  <footer class="footer">
+    <div class="footer-container">
+      <figure class="footer__img-container">
+        <img src="images/logo.svg" alt="dine log"/>
+      </figure>
+      <div class="footer-texts-container">
+        <address class="footer__address text-s text-white   text-upper">
+          Marthwaite, Sedbergh<br/>
+          Cumbria<br/>
+          +00 44 123 4567<br/>
+        </address>
+        <table class="footer__table text-s text-white .text-upper">
+        <thead>
+          <tr>
+            <th colspan="2" class="table-head text-s text-s-regular ">
+              Open Times
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mon - Fri:</td>
+            <td>09:00 AM - 10:00 PM</td>
+          </tr>
+          <tr>
+            <td>Sat - Sun:</td>
+            <td>09:00 AM - 11:30 PM</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

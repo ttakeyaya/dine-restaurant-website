@@ -1,25 +1,79 @@
 .header {
   background-color: var(--color-primary-cod-gray);
   height: 74.8rem;
-
+  @include mq(md) {
+    height: 89.2rem;
+  }
+  @include mq(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 82rem;
+  }
   &__hero {
     background: url("../images/homepage/hero-bg-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     width: 100vw;
-    height: 35vh;
-    @media screen and (min-width: 460px) {
+    height: 40vh;
+    filter: brightness(120%);
+    @include mq(smh) {
       background: url("../images/homepage/hero-bg-mobile@2x.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
+      filter: brightness(120%);
+    }
+    @include mq(md) {
+      background: url("../images/homepage/hero-bg-tablet.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      filter: brightness(120%);
+    }
+    @include mq(mdh) {
+      background: url("../images/homepage/hero-bg-tablet@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      filter: brightness(120%);
+    }
+    @include mq(lg) {
+      background: url("../images/homepage/hero-bg-desktop.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      height: 100%;
+      filter: brightness(100%);
+      width: 150vw;
+    }
+    @include mq(xlg) {
+      background: url("../images/homepage/hero-bg-desktop@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+      height: 100%;
+      filter: brightness(110%);
     }
   }
   &__content {
+    position: relative;
     text-align: center;
     margin: 0 auto;
     width: 75vw;
+    @include mq(lg) {
+      text-align: left;
+      width: 100vw;
+
+      transform: translateX(10%);
+    }
+    .header-texts-container {
+      @include mq(lg) {
+        position: absolute;
+        width: 52.3rem;
+        transform: translateY(30%);
+      }
+    }
     .header__title {
       padding-top: 3.2rem;
       padding-bottom: 2.4rem;
@@ -27,6 +81,14 @@
     .header__body {
       padding-bottom: 3.2rem;
       margin: 0 auto;
+      @include mq(lg) {
+        padding-right: 6.5rem;
+      }
+    }
+    .header__logo {
+      @include mq(lg) {
+        padding-top: 6.5rem;
+      }
     }
   }
 }

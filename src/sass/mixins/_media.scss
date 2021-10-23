@@ -1,0 +1,20 @@
+/*
+  Define media queries.
+
+  **h is used only for high resolution images. smh, mdh...
+*/
+$breakpoints: (
+  "sm": "screen and (min-width: 340px)",
+  "smh": "screen and (min-width:460px)",
+  "md": "screen and (min-width:600px)",
+  "mdh": "screen and (min-width:720px)",
+  "lg": "screen and (min-width:1000px)",
+  "xlg": "screen and (min-width:1200px)",
+) !default;
+
+// Using sass map-get function to produce media queries
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

@@ -1,0 +1,117 @@
+.booking {
+  background: url("../images/booking/hero-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+  text-align: center;
+  @include mq(smh) {
+    background: url("../images/booking/hero-bg-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+  }
+  @include mq(md) {
+  }
+  @include mq(mdh) {
+  }
+  @include mq(lg) {
+  }
+  @include mq(xlg) {
+  }
+  &__logo {
+    padding-top: 5.6rem;
+  }
+  &__title {
+    padding-top: 4rem;
+  }
+  &__body {
+    padding: 1.4rem 0 2.4rem 0;
+    margin: 0 2rem;
+  }
+  &__reserve-place {
+    font-size: 1.4rem;
+    border: 1px solid white;
+    color: white;
+    font-weight: 600;
+    padding: 2rem;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+.booking-main {
+  display: flex;
+  justify-content: center;
+  .form-container {
+    transform: translateY(-15%);
+    height: 58.5rem;
+    width: 85vw;
+    background: var(--color-white);
+    box-shadow: 0px 50px 100px -60px var(--color-secondary-ebony-clay);
+  }
+}
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  &__item {
+    width: 60%;
+    height: 4.5rem;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    height: 100%;
+    color: var(--color-secondary-shuttle-gray);
+    font-size: 1.8rem;
+    letter-spacing: -0.22px;
+    padding-left: 1.6rem;
+    border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: transparent;
+  }
+  .picker {
+    display: flex;
+    justify-content: space-between;
+
+    .picker-item {
+      border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+      padding-bottom: 1rem;
+      padding-top: 0.8rem;
+      width: 7.3rem;
+    }
+  }
+  .date__text {
+    font-size: 1.8rem;
+    letter-spacing: -0.22px;
+    line-height: 2.8rem;
+  }
+  .picker-select {
+    border: none;
+    border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+    font-family: $spartan;
+    outline: transparent;
+    font-size: 1.8rem;
+  }
+  .form__num-reservations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+    .booking__form__btn {
+      border: none;
+      background-color: transparent;
+      font-size: 1.8rem;
+      color: var(--color-primary-beaver);
+    }
+  }
+}

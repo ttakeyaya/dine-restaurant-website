@@ -9,6 +9,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include mq(md) {
+    background-image: url("../images/homepage/ready-bg-tablet.jpg");
+  }
+  @include mq(mdh) {
+    background-image: url("../images/homepage/ready-bg-tablet@2x.jpg");
+  }
+  @include mq(lg) {
+    backgroud-image: url("../images/homepage/ready-bg-desktop.jpg");
+  }
+  @include mq(lg) {
+    backgroud-image: url("../images/homepage/ready-bg-desktop.jpg");
+  }
+  @include mq(xlg) {
+    backgroud-image: url("../images/homepage/ready-bg-desktop@2x.jpg");
+    max-width: 1400px;
+  }
   &__title {
     text-align: center;
     padding-bottom: 2.4rem;

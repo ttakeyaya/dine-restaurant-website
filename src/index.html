@@ -13,18 +13,19 @@
   <header class="header">
     <!-- hero image -->
     <div class="header__hero"></div>
-
     <!-- header main content -->
     <div class="header__content">
-      <img src="images/logo.svg" alt="dine logo">
-      <h1 class="header__title text-white text-title">
-        Exquisite dining<br/> since 1989
-      </h1>
-      <p class="header__body text-white text-body">
-        Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from 
-        the comfort of our farmhouse.
-      </p>
-      <button type="button" onclick="location.href='./booking.html'" class="btn btn-white">Book a table</button>
+      <img src="images/logo.svg" alt="dine logo" class="header__logo">
+      <div class="header-texts-container">
+        <h1 class="header__title text-white text-title">
+          Exquisite dining<br/> since 1989
+        </h1>
+        <p class="header__body text-white text-body">
+          Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from 
+          the comfort of our farmhouse.
+        </p>
+        <button type="button" onclick="location.href='./booking.html'" class="btn btn-white">Book a table</button>
+      </div>
     </div>
   </header>
   <!-- header ends -->
@@ -32,31 +33,42 @@
     <!-- about section starts -->
     <section class="about">
       <article class="about__content">
-        <picture class="about__img-container">
+        <picture class="about__img-container container-top">
+          <source srcset="./images/homepage/enjoyable-place-desktop@2x.jpg" media="(min-width:1200px)">
+          <source srcset="./images/homepage/enjoyable-place-desktop.jpg" media="(min-width:1000px)">
+          <source srcset="./images/homepage/enjoyable-place-tablet@2x.jpg" media="(min-width:720px)">
+          <source srcset="./images/homepage/enjoyable-place-tablet.jpg" media="(min-width:600px)">
           <source srcset="./images/homepage/enjoyable-place-mobile@2x.jpg" media="(min-width:500px)">
           <img src="images/homepage/enjoyable-place-mobile.jpg">
         </picture>
-        <h3 class="about__title text-subtitle">
-          Enjoyable place<br/> for all the family
-        </h3>
-        <p class="about__body text-subbody">
-          Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
-          a tour of the farm before your meal.
-        </p>
+        <div class="about-texts-container">
+          <h3 class="about__title text-subtitle">
+            Enjoyable place<br/> for all the family
+          </h3>
+          <p class="about__body text-subbody">
+            Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
+            a tour of the farm before your meal.
+          </p>
+        </div>
       </article>
-      <article class="about__content">
-        <picture class="about__img-container">
+      <article class="about__content about__content-bottom">
+        <picture class="about__img-container container-bottom">
+          <source srcset="images/homepage/locally-sourced-desktop.jpg" media="(min-width:1200px)">
+          <source srcset="images/homepage/locally-sourced-desktop.jpg" media="(min-width:1000px)">
+          <source srcset="images/homepage/locally-sourced-tablet@2x.jpg" media="(min-width:720px)">
+          <source srcset="images/homepage/locally-sourced-tablet.jpg" media="(min-width:600px)">
           <source srcset="images/homepage/locally-sourced-mobile@2x.jpg" media="(min-width:500px)">
           <img src="images/homepage/locally-sourced-mobile.jpg">
         </picture>
-        
-        <h3 class="about__title text-subtitle">
-          The most locally<br/> sourced food
-        </h3>
-        <p class="about__body text-subbody">
-          All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
-          eating the freshest, most sustainable food.
-        </p>
+        <div class="about-texts-container">
+          <h3 class="about__title text-subtitle">
+            The most locally<br/> sourced food
+          </h3>
+          <p class="about__body body-bottom text-subbody">
+            All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
+            eating the freshest, most sustainable food.
+          </p>
+        </div>
       </article>
     </section>
     <!-- about ends -->
@@ -64,53 +76,70 @@
     <!-- menu starts -->
     <section class="menu">
       <div class="menu-container">
-        <h3 class="menu__title text-subtitle text-white">
-          A few highlights<br/> from our menu
-        </h3>
-        <p class="menu__description text-subbody text-white">
-          We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. 
-          Our menu is revamped every season.
-        </p>
-        <article class="menu__item">
-          <picture class="menu__img-container">
-            <source srcset="./images/homepage/salmon-mobile@2x.jpg" media="(min-width:500px)">
-            <img src="images/homepage/salmon-mobile.jpg">
-          </picture>
-          <h4 class="menu__item-title text-menu-title text-white">
-            Seared Salmon Fillet
-          </h4>
-          <p class="menu__item-description text-menu-description text-white">
-            Our locally sourced salmon served with a refreshing buckwheat summer salad.
+        <div class="menu-container-texts">
+          <h3 class="menu__title text-subtitle text-white">
+            A few highlights<br/> from our menu
+          </h3>
+          <p class="menu__description text-subbody text-white">
+            We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. 
+            Our menu is revamped every season.
           </p>
-        </article>
-        <article class="menu__item">
-          <picture class="menu__img-container">
-            <source srcset=".images/homepage/beef-mobile@2x.jpg" media="(min-width:500px)">
-            <img src="images/homepage/beef-mobile.jpg">
-          </picture>
-          <h4 class="menu__item-title text-menu-title text-white">
-            Rosemary Filet Mignon
-          </h4>
-          <p class="menu__item-description text-menu-description text-white">
-            Our prime beef served to your taste with a delicious choice of seasonal sides.
-          </p>
-        </article>
-        <article class="menu__item">
-          <picture class="menu__img-container">
-            <source srcset="images/homepage/chocolate-mobile@2x.jpg" media="(min-width:500px)">
-            <img src="images/homepage/chocolate-mobile.jpg">
-          </picture>
-          <h4 class="menu__item-title text-menu-title text-white">
-            Summer Fruit Chocolate Mousse
-          </h4>
-          <p class="menu__item-description  text-menu-description text-white">
-            Creamy mousse combined with summer fruits and dark chocolate shavings.
-          </p>
-        </article>
+        </div>
+        <div class="menu-items-container">
+          <article class="menu__item">
+            <picture class="menu__img-container">
+              <source srcset="./images/homepage/salmon-desktop-tablet@2x.jpg" media="(min-width:720px)">
+              <source srcset="./images/homepage/salmon-desktop-tablet.jpg" media="(min-width:600px)">
+              <source srcset="./images/homepage/salmon-mobile@2x.jpg" media="(min-width:500px)">
+              <img src="images/homepage/salmon-mobile.jpg">
+            </picture>
+            <div class="menu-texts-container">
+              <h4 class="menu__item-title text-menu-title text-white">
+                Seared Salmon Fillet
+              </h4>
+              <p class="menu__item-description text-menu-description text-white">
+                Our locally sourced salmon served with a refreshing buckwheat summer salad.
+              </p>
+            </div>
+          </article>
+          <article class="menu__item">
+            <picture class="menu__img-container">
+              <source srcset="images/homepage/beef-desktop-tablet@2x.jpg" media="(min-width:720px)">
+              <source srcset="images/homepage/beef-desktop-tablet.jpg" media="(min-width:600px)">
+              <source srcset="images/homepage/beef-mobile@2x.jpg" media="(min-width:500px)">
+              <img src="images/homepage/beef-mobile.jpg">
+            </picture>
+            <div class="menu-texts-container">
+              <h4 class="menu__item-title text-menu-title text-white">
+                Rosemary Filet Mignon
+              </h4>
+              <p class="menu__item-description text-menu-description text-white">
+                Our prime beef served to your taste with a delicious choice of seasonal sides.
+              </p>
+            </div>
+          </article>
+          <article class="menu__item">
+            <picture class="menu__img-container">
+              <source srcset="images/homepage/chocolate-desktop-tablet@2x.jpg" media="(min-width:720px)">
+              <source srcset="images/homepage/chocolate-desktop-tablet.jpg" media="(min-width:600px)">
+              <source srcset="images/homepage/chocolate-mobile@2x.jpg" media="(min-width:500px)">
+              <img src="images/homepage/chocolate-mobile.jpg">
+            </picture>
+            <div class="menu-texts-container">
+              <h4 class="menu__item-title text-menu-title text-white">
+                Summer Fruit Chocolate Mousse
+              </h4>
+              <p class="menu__item-description  text-menu-description text-white">
+                Creamy mousse combined with summer fruits and dark chocolate shavings.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
     <!-- menu ends -->
 
+    <!-- feature starts -->
     <section class="feature">
       <div class="feature-conainer">
         <ul class="feature__list">
@@ -150,24 +179,30 @@
       </div>
       
     </section>
+    <!-- feature ends -->
   </main>
+  <!-- reservation starts -->
   <aside class="reservation">
     <h4 class="reservation__title text-subtitle text-white">
-      Ready to make a<br/> reservation?
+      Ready to make a reservation?
     </h4>
     <button type="button" onclick="location.href='./booking.html'" class="btn btn-white">Book a table</button>
   </aside>
+  <!-- reservation edns -->
+
+  <!-- footer starts -->
   <footer class="footer">
     <div class="footer-container">
       <figure class="footer__img-container">
         <img src="images/logo.svg" alt="dine log"/>
       </figure>
-      <address class="footer__address text-s text-white text-upper">
-        Marthwaite, Sedbergh<br/>
-        Cumbria<br/>
-        +00 44 123 4567<br/>
-      </address>
-      <table class="footer__table text-s text-white .text-upper">
+      <div class="footer-texts-container">
+        <address class="footer__address text-s text-white   text-upper">
+          Marthwaite, Sedbergh<br/>
+          Cumbria<br/>
+          +00 44 123 4567<br/>
+        </address>
+        <table class="footer__table text-s text-white .text-upper">
         <thead>
           <tr>
             <th colspan="2" class="table-head text-s text-s-regular ">
@@ -185,10 +220,10 @@
             <td>09:00 AM - 11:30 PM</td>
           </tr>
         </tbody>
-      </table>
-  
+        </table>
+      </div>
     </div>
-    
   </footer>
+  <!-- footer ends -->
 </body>
 </html>

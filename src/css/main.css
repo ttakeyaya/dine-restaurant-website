@@ -1,3 +1,8 @@
+/*
+  Define media queries.
+
+  **h is used only for high resolution images. smh, mdh...
+*/
 /**
 -Import spartan and defined the font variable
 -Define color varibalbes
@@ -29,11 +34,15 @@ note: set 1rem to be 10px;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Spartan", sans-serif;
   overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--color-white);
 }
 
 /**
@@ -179,26 +188,94 @@ Define a button
   background-color: var(--color-primary-cod-gray);
   height: 74.8rem;
 }
+@media screen and (min-width:600px) {
+  .header {
+    height: 89.2rem;
+  }
+}
+@media screen and (min-width:1000px) {
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 82rem;
+  }
+}
 .header__hero {
   background: url("../images/homepage/hero-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   width: 100vw;
-  height: 35vh;
+  height: 40vh;
+  filter: brightness(120%);
 }
-@media screen and (min-width: 460px) {
+@media screen and (min-width:460px) {
   .header__hero {
     background: url("../images/homepage/hero-bg-mobile@2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    filter: brightness(120%);
+  }
+}
+@media screen and (min-width:600px) {
+  .header__hero {
+    background: url("../images/homepage/hero-bg-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: brightness(120%);
+  }
+}
+@media screen and (min-width:720px) {
+  .header__hero {
+    background: url("../images/homepage/hero-bg-tablet@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: brightness(120%);
+  }
+}
+@media screen and (min-width:1000px) {
+  .header__hero {
+    background: url("../images/homepage/hero-bg-desktop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    filter: brightness(100%);
+    width: 150vw;
+  }
+}
+@media screen and (min-width:1200px) {
+  .header__hero {
+    background: url("../images/homepage/hero-bg-desktop@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    filter: brightness(110%);
   }
 }
 .header__content {
+  position: relative;
   text-align: center;
   margin: 0 auto;
   width: 75vw;
+}
+@media screen and (min-width:1000px) {
+  .header__content {
+    text-align: left;
+    width: 100vw;
+    transform: translateX(10%);
+  }
+}
+@media screen and (min-width:1000px) {
+  .header__content .header-texts-container {
+    position: absolute;
+    width: 52.3rem;
+    transform: translateY(30%);
+  }
 }
 .header__content .header__title {
   padding-top: 3.2rem;
@@ -208,22 +285,130 @@ Define a button
   padding-bottom: 3.2rem;
   margin: 0 auto;
 }
+@media screen and (min-width:1000px) {
+  .header__content .header__body {
+    padding-right: 6.5rem;
+  }
+}
+@media screen and (min-width:1000px) {
+  .header__content .header__logo {
+    padding-top: 6.5rem;
+  }
+}
 
 .about {
   transform: translateY(-2%);
+}
+@media screen and (min-width:600px) {
+  .about {
+    transform: translateY(-5%);
+  }
+}
+@media screen and (min-width:1000px) {
+  .about {
+    transform: translateY(-4%);
+  }
 }
 .about__content {
   width: 80vw;
   margin: 0 auto;
   text-align: center;
 }
-.about__img-container {
-  min-height: 400px;
+@media screen and (min-width:1000px) {
+  .about__content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+    width: 100vw;
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width:1000px) {
+  .about__content-bottom {
+    position: relative;
+    z-index: 500;
+    flex-direction: row-reverse;
+    transform: translateY(15%);
+  }
+}
+@media screen and (min-width:1000px) {
+  .about .about-texts-container {
+    width: 40rem;
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width:1200px) {
+  .about .about-texts-container {
+    width: 44.5rem;
+  }
+}
+@media screen and (min-width:1000px) {
+  .about__img-container {
+    max-width: 54rem;
+    height: 60rem;
+  }
+}
+@media screen and (min-width:1200px) {
+  .about__img-container {
+    max-width: 54rem;
+    max-height: 72rem;
+  }
 }
 .about__img-container > img {
   width: 100%;
   object-fit: cover;
   box-shadow: 0px 50px 100px -60px var(--color-secondary-ebony-clay);
+}
+@media screen and (min-width:1000px) {
+  .about__img-container > img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width:600px) {
+  .about__img-container.container-top {
+    position: relative;
+    z-index: 1;
+  }
+  .about__img-container.container-top::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    top: -1500%;
+    left: -105%;
+    background: url("../images/patterns/pattern-curve-top-right.svg");
+    width: 895px;
+    height: 320px;
+  }
+}
+@media screen and (min-width:600px) and (min-width:1000px) {
+  .about__img-container.container-top::before {
+    top: 30%;
+    left: -30%;
+  }
+}
+@media screen and (min-width:600px) {
+  .about__img-container.container-bottom {
+    position: relative;
+    z-index: 1;
+  }
+  .about__img-container.container-bottom::before {
+    position: absolute;
+    content: " ";
+    top: -1000%;
+    right: -7%;
+    background: url("../images/patterns/pattern-lines.svg");
+    width: 160px;
+    height: 76px;
+  }
+}
+@media screen and (min-width:600px) and (min-width:1000px) {
+  .about__img-container.container-bottom::before {
+    top: 30%;
+    right: -30%;
+  }
 }
 .about__title {
   padding-top: 8.6rem;
@@ -243,18 +428,100 @@ Define a button
 .about__body {
   padding-bottom: 8rem;
 }
+@media screen and (min-width:600px) {
+  .about__body.body-bottom {
+    position: relative;
+    padding-bottom: 6rem;
+  }
+  .about__body.body-bottom::after {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: 50%;
+    background: url("../images/patterns/pattern-curve-top-left.svg");
+    width: 895px;
+    height: 320px;
+  }
+}
+@media screen and (min-width:600px) and (min-width:1000px) {
+  .about__body.body-bottom::after {
+    z-index: -4;
+    top: -10vh;
+    left: 80%;
+  }
+}
+@media screen and (min-width:600px) and (min-width:1200px) {
+  .about__body.body-bottom::after {
+    top: -12vh;
+  }
+}
 
 .menu {
+  position: relative;
   background-color: var(--color-primary-cod-gray);
   text-align: center;
+}
+@media screen and (min-width:1000px) {
+  .menu {
+    z-index: -9;
+    height: 76rem;
+    display: flex;
+    align-items: center;
+  }
 }
 .menu .menu-container {
   max-width: 80vw;
   margin: 0 auto;
   padding-bottom: 7.2rem;
 }
+@media screen and (min-width:1000px) {
+  .menu .menu-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width:1000px) {
+  .menu .menu-container .menu-container-texts {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 44.5rem;
+    padding-right: 1rem;
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width:1000px) {
+  .menu .menu-container .menu-items-container {
+    padding-top: 14rem;
+  }
+}
 .menu__img-container > img {
   width: 100%;
+}
+@media screen and (min-width:600px) {
+  .menu__img-container > img {
+    width: 128px;
+    height: 96px;
+  }
+}
+@media screen and (min-width:600px) {
+  .menu__img-container {
+    position: relative;
+    z-index: 1;
+  }
+  .menu__img-container::after {
+    z-index: -2;
+    position: absolute;
+    content: "";
+    background-image: url("../images/patterns/pattern-divide.svg");
+    top: 15%;
+    right: -20%;
+    width: 7.1rem;
+    height: 0.7rem;
+  }
 }
 .menu__title {
   padding-top: 11.1rem;
@@ -280,12 +547,38 @@ Define a button
 .menu__item:last-child {
   border: none;
 }
+@media screen and (min-width:600px) {
+  .menu__item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .menu__item .menu-texts-container {
+    padding-left: 50px;
+  }
+}
+@media screen and (min-width:600px) and (min-width:1000px) {
+  .menu__item .menu-texts-container {
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width:1000px) {
+  .menu__item {
+    max-width: 54rem;
+    margin-bottom: 0;
+  }
+}
 .menu__item-title {
   padding-top: 3.2rem;
   padding-bottom: 0.4rem;
 }
 .menu__item-description {
   padding: 0 0.6rem 2.4rem 0.6rem;
+}
+@media screen and (min-width:600px) {
+  .menu__item-description {
+    padding: 0.4rem 0 2.8rem 0rem;
+  }
 }
 
 .feature {
@@ -332,6 +625,32 @@ DEV
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width:600px) {
+  .reservation {
+    background-image: url("../images/homepage/ready-bg-tablet.jpg");
+  }
+}
+@media screen and (min-width:720px) {
+  .reservation {
+    background-image: url("../images/homepage/ready-bg-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width:1000px) {
+  .reservation {
+    backgroud-image: url("../images/homepage/ready-bg-desktop.jpg");
+  }
+}
+@media screen and (min-width:1000px) {
+  .reservation {
+    backgroud-image: url("../images/homepage/ready-bg-desktop.jpg");
+  }
+}
+@media screen and (min-width:1200px) {
+  .reservation {
+    backgroud-image: url("../images/homepage/ready-bg-desktop@2x.jpg");
+    max-width: 1400px;
+  }
+}
 .reservation__title {
   text-align: center;
   padding-bottom: 2.4rem;
@@ -346,9 +665,36 @@ DEV
   text-align: center;
   padding-bottom: 8rem;
 }
+@media screen and (min-width:600px) {
+  .footer .footer-container {
+    padding: 6.4rem 0;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width:1000px) {
+  .footer .footer-container {
+    max-width: 1400px;
+    width: 100%;
+    padding-left: 4rem;
+  }
+}
+@media screen and (min-width:1000px) {
+  .footer .footer-texts-container {
+    display: flex;
+    width: 70%;
+  }
+}
 .footer__img-container {
   padding-top: 8rem;
   padding-bottom: 4rem;
+}
+@media screen and (min-width:600px) {
+  .footer__img-container {
+    padding: 0;
+  }
 }
 .footer__address {
   padding-bottom: 3.2rem;
@@ -356,6 +702,124 @@ DEV
 .footer__table {
   margin: 0 auto;
   text-transform: uppercase;
+}
+@media screen and (min-width:1000px) {
+  .footer__table {
+    padding-left: 1rem;
+  }
+}
+
+.booking {
+  background: url("../images/booking/hero-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+  text-align: center;
+}
+@media screen and (min-width:460px) {
+  .booking {
+    background: url("../images/booking/hero-bg-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+  }
+}
+.booking__logo {
+  padding-top: 5.6rem;
+}
+.booking__title {
+  padding-top: 4rem;
+}
+.booking__body {
+  padding: 1.4rem 0 2.4rem 0;
+  margin: 0 2rem;
+}
+.booking__reserve-place {
+  font-size: 1.4rem;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  padding: 2rem;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.booking-main {
+  display: flex;
+  justify-content: center;
+}
+.booking-main .form-container {
+  transform: translateY(-15%);
+  height: 58.5rem;
+  width: 85vw;
+  background: var(--color-white);
+  box-shadow: 0px 50px 100px -60px var(--color-secondary-ebony-clay);
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.booking__form__item {
+  width: 60%;
+  height: 4.5rem;
+}
+.booking__form input[type=text],
+.booking__form input[type=email] {
+  width: 100%;
+  height: 100%;
+  color: var(--color-secondary-shuttle-gray);
+  font-size: 1.8rem;
+  letter-spacing: -0.22px;
+  padding-left: 1.6rem;
+  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: transparent;
+}
+.booking__form .picker {
+  display: flex;
+  justify-content: space-between;
+}
+.booking__form .picker .picker-item {
+  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  width: 7.3rem;
+}
+.booking__form .date__text {
+  font-size: 1.8rem;
+  letter-spacing: -0.22px;
+  line-height: 2.8rem;
+}
+.booking__form .picker-select {
+  border: none;
+  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+  font-family: "Spartan", sans-serif;
+  outline: transparent;
+  font-size: 1.8rem;
+}
+.booking__form .form__num-reservations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+}
+.booking__form .form__num-reservations .booking__form__btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: var(--color-primary-beaver);
 }
 
 /*# sourceMappingURL=main.css.map */

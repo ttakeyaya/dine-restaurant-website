@@ -1,3 +1,4 @@
+@import "mixins/media";
 @import "base";
 @import "typo";
 
@@ -9,3 +10,5 @@
 @import "layouts/feature";
 @import "layouts/reservation";
 @import "layouts/footer";
+
+@import "layouts/booking";

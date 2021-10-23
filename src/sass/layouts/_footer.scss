@@ -5,10 +5,31 @@
     margin: 0 auto;
     text-align: center;
     padding-bottom: 8rem;
+    @include mq(md) {
+      padding: 6.4rem 0;
+      display: flex;
+      text-align: left;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    @include mq(lg) {
+      max-width: 1400px;
+      width: 100%;
+      padding-left: 4rem;
+    }
+  }
+  .footer-texts-container {
+    @include mq(lg) {
+      display: flex;
+      width: 70%;
+    }
   }
   &__img-container {
     padding-top: 8rem;
     padding-bottom: 4rem;
+    @include mq(md) {
+      padding: 0;
+    }
   }
   &__address {
     padding-bottom: 3.2rem;
@@ -16,5 +37,8 @@
   &__table {
     margin: 0 auto;
     text-transform: uppercase;
+    @include mq(lg) {
+      padding-left: 1rem;
+    }
   }
 }

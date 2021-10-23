@@ -37,8 +37,12 @@ $spartan: "Spartan", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   font-family: $spartan;
   overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--color-white);
 }
