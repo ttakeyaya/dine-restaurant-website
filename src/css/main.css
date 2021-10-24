@@ -1,7 +1,6 @@
 /*
   Define media queries.
 
-  **h is used only for high resolution images. smh, mdh...
 */
 /**
 -Import spartan and defined the font variable
@@ -178,6 +177,11 @@ Define a button
   background-color: var(--color-primary-cod-gray);
   color: var(--color-white);
   border: none;
+}
+.btn-black:hover {
+  background-color: white;
+  border: 1px solid var(--color-primary-cod-gray);
+  color: var(--color-primary-cod-gray);
 }
 
 .header {
@@ -892,6 +896,8 @@ DEV
 styles for booking.html
 
 note: the style of the footer is defined @ layouts/_footer.scss
+
+Also, all input fields are styled @ the bottom of this file(line 243). Be careful, as you overwrite.
 */
 .booking {
   background: url("../images/booking/hero-bg-mobile.jpg");
@@ -1096,20 +1102,6 @@ note: the style of the footer is defined @ layouts/_footer.scss
     justify-content: space-between;
   }
 }
-.booking__form input[type=text],
-.booking__form input[type=email] {
-  width: 100%;
-  height: 100%;
-  color: var(--color-secondary-shuttle-gray);
-  font-size: 1.8rem;
-  letter-spacing: -0.22px;
-  padding-left: 1.6rem;
-  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  outline: transparent;
-}
 .booking__form .picker {
   display: flex;
   justify-content: space-between;
@@ -1139,6 +1131,8 @@ note: the style of the footer is defined @ layouts/_footer.scss
   font-family: "Spartan", sans-serif;
   outline: transparent;
   font-size: 1.8rem;
+  cursor: pointer;
+  background-color: var(--color-white);
 }
 .booking__form .form__num-reservations {
   display: flex;
@@ -1152,6 +1146,34 @@ note: the style of the footer is defined @ layouts/_footer.scss
   background-color: transparent;
   font-size: 1.8rem;
   color: var(--color-primary-beaver);
+  cursor: pointer;
+}
+
+.input {
+  font-family: "Spartan", sans-serif;
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  letter-spacing: -0.22px;
+  padding-left: 1.6rem;
+  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: transparent;
+  cursor: pointer;
+}
+
+.alert {
+  border-bottom: 1px solid red;
+}
+
+.alert::placeholder {
+  color: red;
+}
+
+.alert-msg {
+  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

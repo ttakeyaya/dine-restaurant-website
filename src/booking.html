@@ -25,44 +25,44 @@
   </header>
   <main class="booking-main">
     <div class="form-container">
-      <form action="#" method="post" class="booking__form">
-        <label for="name" class="booking__form__item">
+      <form action="#" method="post" class="booking__form" name="reservation">
+        <label for="name" class="booking__form__item " id="name">
           <!-- Name -->
-          <input type="text" name="name" placeholder="Name">
+          <input type="text" name="name" placeholder="Name" class="input">
         </label>
-        <label for="email" class="booking__form__item">
+        <label for="email" class="booking__form__item" id="email">
           <!-- Email -->
-          <input type="email" name="email" placeholder="Email">
+          <input type="email" name="email" placeholder="Email" class="input">
         </label>
-        <label for="date" class="booking__form__item">
+        <label for="date" class="booking__form__item" id="date">
           <span class="date__text">
             Pick a date
           </span>
           <div class="picker">
-            <input type="text" name="date-month" min="1" max="12" placeholder="MM" class="picker-item">
-            <input type="text" name="date-day" min="1" max="31" placeholder="DD" class="picker-item">
-            <input type="text" name="date-year" min="2021" max="2024" placeholder="YYYY" class="picker-item">
+            <input type="text" name="datemonth" min="1" max="12" placeholder="MM" class="picker-item input">
+            <input type="text" name="dateday" min="1" max="31" placeholder="DD" class="picker-item input">
+            <input type="text" name="dateyear" min="2021" max="2024" placeholder="YYYY" class="picker-item input">
           </div>
         </label>
-        <label for="time" class="booking__form__item">
+        <label for="time" class="booking__form__item" id="time">
           <span class="date__text">
             Pick a time
           </span>
           <div class="picker">
-            <input type="text" name="date-month"  placeholder="09" class="picker-item">
-            <input type="text" name="date-day"  placeholder="00" class="picker-item">
-            <select class="picker-select">
-              <option value="AM">AM</option>
-              <option value="PM">PM</option>
+            <input type="text" name="datehours"  placeholder="09" class="picker-item input">
+            <input type="text" name="datemins"  placeholder="00" class="picker-item input">
+            <select class="picker-select" name="ampm">
+              <option value="AM" class="select-item">AM</option>
+              <option value="PM" class="select-item">PM</option>
             </select>
           </div>
         </label>
-        <label class="booking__form__item form__num-reservations">
-          <button class="booking__form__btn">−</button>
-          <p>4 people</p>
-          <button class="booking__form__btn">+</button>
+        <label class="booking__form__item form__num-reservations" id="reservation">
+          <button type="button" class="booking__form__btn" name="decrease">−</button>
+          <p><span id="reservationNum">4</span> people</p>
+          <button class="booking__form__btn" name="increase">+</button>
         </label>
-        <button type="submit" class="btn btn-black">
+        <button type="button" class="btn btn-black" name="submitBtn">
           Make Reservation
         </button>
       </form>
@@ -102,5 +102,6 @@
       </div>
     </div>
   </footer>
+  <script type="module" src="./js/booking.js"></script>
 </body>
 </html>
