@@ -1,14 +1,7 @@
 /**
-  h1, spartan light, 64px 72px line, -0.8chara
-  h2, spartan bold, 40px 56px line, -0.5chara
-  H3(L) spartan Bold, 18px, 28px line, -0.22 chara
-  H3(s) spartan semibold, 14px 28px line, +2chara
-  Body1, spartan regular, 18px, 30px line, -0.22chara
-  body2, spartan regular, 15px , 28px line, -0.19chara
+Defined font-sizes, font-weight, and font-color used throughout pages.
+
 */
-.text-white {
-  color: white;
-}
 .text-title {
   font-weight: 300;
   font-size: 3.2rem;
@@ -99,4 +92,7 @@
 }
 .text-upper {
   text-transform: uppercase;
+}
+.text-white {
+  color: white;
 }

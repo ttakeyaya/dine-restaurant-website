@@ -142,20 +142,37 @@
     <!-- feature starts -->
     <section class="feature">
       <div class="feature-conainer">
-        <ul class="feature__list">
-          <li class="feature__list__item text-s">Family Gathering</li>
-          <li class="feature__list__item text-s">Special Events</li>
-          <li class="feature__list__item text-s">Social Events</li>
-        </ul>
-        <article class="feature__item item1">
-          <h4 class="feature__item__title text-subtitle">
-            Family Gathering
-          </h4>
-          <p class="feature__item__description text-subbody">
-            We love catering for entire families. So please bring everyone along for a special meal with your 
-            loved ones. We’ll provide a memorable experience for all.
-          </p>
-        </article>
+        <picture class="feature-img-container">
+          <source srcset="./images/homepage/family-gathering-desktop@2x.jpg" media="(min-width:1200px)">
+          <source srcset="./images/homepage/family-gathering-desktop.jpg" media="(min-width:1000px)">
+          <source srcset="./images/homepage/family-gathering-tablet@2x.jpg" media="(min-width:720px)">
+          <source srcset="./images/homepage/family-gathering-tablet.jpg" media="(min-width:600px)">
+          <source srcset="./images/homepage/family-gathering-mobile@2x.jpg" media="(min-width:500px)">
+          <img src="images/homepage/family-gathering-mobile.jpg" class="img"/>
+        </picture>
+
+        <div class="feature-texts-container">
+          <ul class="feature__list">
+            <li class="feature__list__item text-s text-upper">Family Gathering</li>
+            <li class="feature__list__item text-s text-upper">Special Events</li>
+            <li class="feature__list__item text-s text-upper">Social Events</li>
+          </ul>
+          <div class="feature-items-btn-container"> 
+            <article class="feature__item item1">
+              <h4 class="feature__item__title text-subtitle">
+                Family Gathering
+              </h4>
+              <p class="feature__item__description text-subbody">
+                We love catering for entire families. So please bring everyone along for a special meal with your 
+                loved ones. We’ll provide a memorable experience for all.
+              </p>
+            </article>
+            <button type="button" onclick="location.href='./booking.html'" class="btn btn-black feature__btn">Book a table</button>
+          </div>
+        </div>
+
+
+        <!-- JS -->
         <article class="feature__item item2">
           <h4 class="feature__item__title text-subtitle">
             Special Events
@@ -174,8 +191,8 @@
             parties. We’ll work with you to make your event a hit with everyone.
           </p>
         </article>
-      
-        <button type="button" onclick="location.href='./booking.html'" class="btn btn-black feature__btn">Book a table</button>
+      <!-- JS -->
+        
       </div>
       
     </section>
