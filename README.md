@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/ttakeyaya/dine-restaurant-website)
-- Live Site URL: [Live](https://ttakeyaya.github.io/dine-restaurant-website/src/booking.html)
+- Live Site URL: [Live](https://ttakeyaya.github.io/dine-restaurant-website/src/index.html)
 
 ## My process
 
