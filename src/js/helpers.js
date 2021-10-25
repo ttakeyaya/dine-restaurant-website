@@ -3,12 +3,6 @@
  * 
  */
 
-
-const alertMessages = {
-  required: "The field is required",
-  incomplete: "The field is incomplete"
-};
-
 let validationStatus ={
   name: false,
   email: false,

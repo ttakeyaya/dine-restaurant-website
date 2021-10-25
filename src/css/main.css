@@ -172,6 +172,10 @@ Define a button
   border: 1px solid white;
   color: var(--color-white);
 }
+.btn-white:hover {
+  background-color: white;
+  color: black;
+}
 
 .btn-black {
   background-color: var(--color-primary-cod-gray);
@@ -711,21 +715,12 @@ Define a button
     margin: 0;
     position: relative;
   }
-  .feature__list::before {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    width: 12rem;
-    height: 1px;
-    background-color: var(--color-primary-beaver);
-    top: 40%;
-    left: -50%;
-  }
 }
 .feature__list__item {
   padding-bottom: 1.6rem;
   cursor: pointer;
   color: var(--color-secondary-shuttle-gray);
+  position: relative;
 }
 @media screen and (min-width:600px) {
   .feature__list__item {
@@ -743,6 +738,26 @@ Define a button
   height: 1px;
   transform: translate(150%, 2500%);
   background-color: var(--color-primary-beaver);
+}
+@media screen and (min-width:600px) {
+  .feature__list__item:hover::before {
+    transform: translate(40%, 5000%);
+  }
+}
+@media screen and (min-width:630px) {
+  .feature__list__item:hover::before {
+    transform: translate(150%, 2500%);
+  }
+}
+@media screen and (min-width:1000px) {
+  .feature__list__item:hover::before {
+    transform: translate(40%, 5000%);
+  }
+}
+@media screen and (min-width:1100px) {
+  .feature__list__item:hover::before {
+    transform: translate(150%, 2500%);
+  }
 }
 .feature__item {
   max-width: 80vw;
@@ -785,15 +800,65 @@ Define a button
   }
 }
 
-/*
-DEV
-*/
-.item2 {
+.hide {
   display: none;
 }
 
-.item3 {
-  display: none;
+@media screen and (min-width:1100px) {
+  .item1 .divider {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary-beaver);
+    top: 40%;
+    left: -20%;
+    z-index: -10;
+  }
+}
+@media screen and (min-width:1200px) {
+  .item1 .divider {
+    left: -45%;
+    top: 42%;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width:1100px) {
+  .item2 .divider2 {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary-beaver);
+    top: 40%;
+    left: -20%;
+    z-index: -10;
+  }
+}
+@media screen and (min-width:1200px) {
+  .item2 .divider2 {
+    left: -45%;
+    top: 42%;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width:1100px) {
+  .item3 .divider3 {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary-beaver);
+    top: 40%;
+    left: -20%;
+    z-index: -10;
+  }
+}
+@media screen and (min-width:1200px) {
+  .item3 .divider3 {
+    left: -45%;
+    top: 42%;
+    width: 100px;
+  }
 }
 
 .reservation {
@@ -1066,7 +1131,7 @@ Also, all input fields are styled @ the bottom of this file(line 243). Be carefu
 .booking-main .form-container {
   transform: translateY(-15%);
   height: 58.5rem;
-  width: 85vw;
+  width: 90vw;
   background: var(--color-white);
   box-shadow: 0px 50px 100px -60px var(--color-secondary-ebony-clay);
 }
@@ -1091,8 +1156,13 @@ Also, all input fields are styled @ the bottom of this file(line 243). Be carefu
   height: 100%;
 }
 .booking__form__item {
-  width: 60%;
+  width: 90%;
   height: 4.5rem;
+}
+@media screen and (min-width:460px) {
+  .booking__form__item {
+    width: 60%;
+  }
 }
 @media screen and (min-width:700px) {
   .booking__form__item {
@@ -1100,6 +1170,7 @@ Also, all input fields are styled @ the bottom of this file(line 243). Be carefu
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .booking__form .picker {
@@ -1112,7 +1183,6 @@ Also, all input fields are styled @ the bottom of this file(line 243). Be carefu
   }
 }
 .booking__form .picker .picker-item {
-  border-bottom: 1px solid var(--color-secondary-shuttle-gray);
   padding-bottom: 1rem;
   padding-top: 0.8rem;
   width: 7rem;
@@ -1124,6 +1194,14 @@ Also, all input fields are styled @ the bottom of this file(line 243). Be carefu
   font-size: 1.8rem;
   letter-spacing: -0.22px;
   line-height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (min-width:700px) {
+  .booking__form .date__text {
+    display: inline-block;
+  }
 }
 .booking__form .picker-select {
   border: none;
@@ -1174,6 +1252,13 @@ Also, all input fields are styled @ the bottom of this file(line 243). Be carefu
 
 .alert-msg {
   color: red;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.alert-show {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

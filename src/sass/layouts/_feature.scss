@@ -111,21 +111,12 @@
       text-align: left;
       margin: 0;
       position: relative;
-      &::before {
-        z-index: -1;
-        position: absolute;
-        content: "";
-        width: 12rem;
-        height: 1px;
-        background-color: var(--color-primary-beaver);
-        top: 40%;
-        left: -50%;
-      }
     }
     &__item {
       padding-bottom: 1.6rem;
       cursor: pointer;
       color: var(--color-secondary-shuttle-gray);
+      position: relative;
       @include mq(md) {
         padding-right: 1.3rem;
       }
@@ -140,12 +131,25 @@
           height: 1px;
           transform: translate(150%, 2500%);
           background-color: var(--color-primary-beaver);
+          @include mq(md) {
+            transform: translate(40%, 5000%);
+          }
+          @include mq(mds) {
+            transform: translate(150%, 2500%);
+          }
+          @include mq(lg) {
+            transform: translate(40%, 5000%);
+          }
+          @include mq(lgm) {
+            transform: translate(150%, 2500%);
+          }
         }
       }
     }
   }
   &__item {
     max-width: 80vw;
+
     &__title {
       padding-top: 2.4rem;
       @include mq(md) {
@@ -178,12 +182,56 @@
   }
 }
 
-/*
-DEV
-*/
-.item2 {
+// JS
+.hide {
   display: none;
 }
-.item3 {
-  display: none;
+// need refactoring
+.item1 .divider {
+  @include mq(lgm) {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary-beaver);
+    top: 40%;
+    left: -20%;
+    z-index: -10;
+  }
+  @include mq(xlg) {
+    left: -45%;
+    top: 42%;
+    width: 100px;
+  }
+}
+.item2 .divider2 {
+  @include mq(lgm) {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary-beaver);
+    top: 40%;
+    left: -20%;
+    z-index: -10;
+  }
+  @include mq(xlg) {
+    left: -45%;
+    top: 42%;
+    width: 100px;
+  }
+}
+.item3 .divider3 {
+  @include mq(lgm) {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--color-primary-beaver);
+    top: 40%;
+    left: -20%;
+    z-index: -10;
+  }
+  @include mq(xlg) {
+    left: -45%;
+    top: 42%;
+    width: 100px;
+  }
 }

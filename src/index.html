@@ -142,7 +142,7 @@
     <!-- feature starts -->
     <section class="feature">
       <div class="feature-conainer">
-        <picture class="feature-img-container">
+        <picture class="feature-img-container" id="familyimg">
           <source srcset="./images/homepage/family-gathering-desktop@2x.jpg" media="(min-width:1200px)">
           <source srcset="./images/homepage/family-gathering-desktop.jpg" media="(min-width:1000px)">
           <source srcset="./images/homepage/family-gathering-tablet@2x.jpg" media="(min-width:720px)">
@@ -150,15 +150,31 @@
           <source srcset="./images/homepage/family-gathering-mobile@2x.jpg" media="(min-width:500px)">
           <img src="images/homepage/family-gathering-mobile.jpg" class="img"/>
         </picture>
+        <picture class="feature-img-container hide" id="specialimg">
+          <source srcset="./images/homepage/special-events-desktop@2x.jpg" media="(min-width:1200px)">
+          <source srcset="./images/homepage/special-events-desktop.jpg" media="(min-width:1000px)">
+          <source srcset="./images/homepage/special-events-tablet@2x.jpg" media="(min-width:720px)">
+          <source srcset="./images/homepage/special-events-tablet.jpg" media="(min-width:600px)">
+          <source srcset="./images/homepage/special-events-mobile@2x.jpg" media="(min-width:500px)">
+          <img src="images/homepage/special-events-mobile.jpg" class="img"/>
+        </picture>
+        <picture class="feature-img-container hide" id="socialimg">
+          <source srcset="./images/homepage/social-events-desktop@2x.jpg" media="(min-width:1200px)">
+          <source srcset="./images/homepage/social-events-desktop.jpg" media="(min-width:1000px)">
+          <source srcset="./images/homepage/social-events-tablet@2x.jpg" media="(min-width:720px)">
+          <source srcset="./images/homepage/social-events-tablet.jpg" media="(min-width:600px)">
+          <source srcset="./images/homepage/social-events-mobile@2x.jpg" media="(min-width:500px)">
+          <img src="images/homepage/social-events-mobile.jpg" class="img"/>
+        </picture>
 
         <div class="feature-texts-container">
           <ul class="feature__list">
-            <li class="feature__list__item text-s text-upper">Family Gathering</li>
-            <li class="feature__list__item text-s text-upper">Special Events</li>
-            <li class="feature__list__item text-s text-upper">Social Events</li>
+            <li class="feature__list__item text-s text-upper item1"><span class="divider"></span>Family Gathering</li>
+            <li class="feature__list__item text-s text-upper item2"><span class="divider2 hide"></span>Special Events</li>
+            <li class="feature__list__item text-s text-upper item3" ><span class="divider3 hide"></span>Social Events</li>
           </ul>
           <div class="feature-items-btn-container"> 
-            <article class="feature__item item1">
+            <article class="feature__item item1" id="family">
               <h4 class="feature__item__title text-subtitle">
                 Family Gathering
               </h4>
@@ -167,31 +183,27 @@
                 loved ones. We’ll provide a memorable experience for all.
               </p>
             </article>
+            <article class="feature__item hide" id="special">
+              <h4 class="feature__item__title text-subtitle">
+                Special Events
+              </h4>
+              <p class="feature__item__description text-subbody">
+                Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. 
+                We’ll be sure to mark your special date with an unforgettable meal.
+              </p>
+            </article>
+            <article class="feature__item hide" id="social">
+              <h4 class="feature__item__title text-subtitle">
+                Social Events
+              </h4>
+              <p class="feature__item__description text-subbody">
+                Are you looking to have a larger social event? No problem! We’re more than happy to cater for big 
+                parties. We’ll work with you to make your event a hit with everyone.
+              </p>
+            </article>
             <button type="button" onclick="location.href='./booking.html'" class="btn btn-black feature__btn">Book a table</button>
           </div>
         </div>
-
-
-        <!-- JS -->
-        <article class="feature__item item2">
-          <h4 class="feature__item__title text-subtitle">
-            Special Events
-          </h4>
-          <p class="feature__item__description text-subbody">
-            Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. 
-            We’ll be sure to mark your special date with an unforgettable meal.
-          </p>
-        </article>
-        <article class="feature__item item3">
-          <h4 class="feature__item__title text-subtitle">
-            Social Events
-          </h4>
-          <p class="feature__item__description text-subbody">
-            Are you looking to have a larger social event? No problem! We’re more than happy to cater for big 
-            parties. We’ll work with you to make your event a hit with everyone.
-          </p>
-        </article>
-      <!-- JS -->
         
       </div>
       
@@ -242,5 +254,7 @@
     </div>
   </footer>
   <!-- footer ends -->
+
+  <script src="./js/slide.js"></script>
 </body>
 </html>

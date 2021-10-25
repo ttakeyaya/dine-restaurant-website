@@ -29,15 +29,19 @@
         <label for="name" class="booking__form__item " id="name">
           <!-- Name -->
           <input type="text" name="name" placeholder="Name" class="input">
+          <span class="alert-msg">The field is required</span>
         </label>
         <label for="email" class="booking__form__item" id="email">
           <!-- Email -->
           <input type="email" name="email" placeholder="Email" class="input">
+          <span class="alert-msg ">The field is required</span>
         </label>
         <label for="date" class="booking__form__item" id="date">
           <span class="date__text">
             Pick a date
+            <span class="alert-msg ">The field is incomplete</span>
           </span>
+          
           <div class="picker">
             <input type="text" name="datemonth" min="1" max="12" placeholder="MM" class="picker-item input">
             <input type="text" name="dateday" min="1" max="31" placeholder="DD" class="picker-item input">
@@ -47,7 +51,9 @@
         <label for="time" class="booking__form__item" id="time">
           <span class="date__text">
             Pick a time
+            <span class="alert-msg ">The field is imcomplete</span>
           </span>
+         
           <div class="picker">
             <input type="text" name="datehours"  placeholder="09" class="picker-item input">
             <input type="text" name="datemins"  placeholder="00" class="picker-item input">

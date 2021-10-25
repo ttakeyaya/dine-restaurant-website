@@ -19,6 +19,10 @@ Define a button
 .btn-white {
   border: 1px solid white;
   color: var(--color-white);
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
 // style for the black button
 .btn-black {
